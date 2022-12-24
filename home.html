@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台管理</title>
+    <link rel="stylesheet" href="./stylesheeps/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <aside class="sidebar vh-100 border-end d-flex flex-column ">
+            <div class="px-4 py-3"><strong>六角西餐廳</strong> - 後台管理</div>
+
+            <div class="overflow-auto ">
+                <a href="home.html" class="px-4 sidebar-link active"><i class="bi bi-house"></i> 首頁</a>
+                <a href="#menu" class="px-4  sidebar-link d-flex justify-content-between" data-bs-toggle="collapse">
+                    <div><i class="bi bi-journal"></i> 訂單管理</div><i class="bi bi-caret-down"></i>
+                </a>
+                <div class="collapse" id="menu">
+                    <a href="orders.html" class="ps-5 sidebar-link "><i class="bi bi-journal"></i> 訂單列表</a>
+                    <a href="order.html" class="ps-5 sidebar-link "><i class="bi bi-journal"></i> 單一訂單細節</a>
+                </div>
+                <a href="#" class="px-4 sidebar-link "><i class="bi bi-link"></i> 相關連結</a>
+            </div>
+
+            <a href="#" class="mt-auto px-4 sidebar-link"><i class="bi bi-box-arrow-right"></i> 登出</a>
+        </aside>
+        <main class="main">
+            <div class="bg-white border-bottom w-100 sticky-top">
+                <a href="#" class="d-inline-block py-3 px-4 border-end" id="sidebar-btn"><i
+                        class="bi bi-arrows-angle-expand"></i></a>
+            </div>
+            <div class="p-4">
+                <div class="row  row-cols-lg-3 g-4 mb-4">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-end">
+                                <h2 class="display-6">在線人數</h2>
+                                <p class="display-4 mb-0">3,403</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-end">
+                                <h2 class="display-6">訂單數</h2>
+                                <p class="display-4 mb-0">1,092</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="card-body text-end">
+                                <h2 class="display-6">營業額</h2>
+                                <p class="display-6 text-success mb-0">NT$ <span class="display-4">204,432</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-4">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <canvas id="pie-chart" class="img-fluid"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <canvas id="bar-chart" class="img-fluid"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent">
+                        <div class="input-group">
+                            <span class="input-group-text border-0 bg-transparent pe-0">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="search" placeholder="search" class="form-control border-0 shadow-none">
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0 text-nowrap align-middle">
+                                <thead class="bg-secondary">
+                                    <tr class="align-middle">
+                                        <th scope="col" class="py-3 ps-4">訂單編號</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">用戶姓名</th>
+                                        <th scope="col">購買品項</th>
+                                        <th scope="col">付款狀態</th>
+                                        <th scope="col">購買金額</th>
+                                        <th scope="col">編輯</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td scope="row" class="ps-4">TX123456789</td>
+                                        <td>123@gmail.com</td>
+                                        <td>王小明</td>
+                                        <td>六角西餐:大麥克全家餐</td>
+                                        <td>尚未付款</td>
+                                        <td class="text-center">900</td>
+                                        <td> <a href="#" class="btn btn-sm btn-outline-dark me-2">編輯<i
+                                                    class="bi bi-pencil"></i></a>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer  bg-transparent py-3">
+                        <nav aria-label="Page navigation example ">
+                            <ul class="pagination justify-content-end mb-0">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/all.js"></script>
+    <script src="./js/chart.js"></script>
+</body>
+
+</html>

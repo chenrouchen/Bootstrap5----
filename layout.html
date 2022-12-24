@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台管理</title>
+    <link rel="stylesheet" href="./stylesheeps/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="d-flex">
+        <aside class="sidebar vh-100 border-end d-flex flex-column ">
+            <div class="px-4 py-3"><strong>六角西餐廳</strong> - 後台管理</div>
+
+            <div class="overflow-auto ">
+                <a href="home.html" class="px-4 sidebar-link active"><i class="bi bi-house"></i> 首頁</a>
+                <a href="#menu" class="px-4  sidebar-link d-flex justify-content-between" data-bs-toggle="collapse">
+                    <div><i class="bi bi-journal"></i> 訂單管理</div><i class="bi bi-caret-down"></i>
+                </a>
+                <div class="collapse" id="menu">
+                    <a href="orders.html" class="ps-5 sidebar-link "><i class="bi bi-journal"></i> 訂單列表</a>
+                    <a href="order.html" class="ps-5 sidebar-link "><i class="bi bi-journal"></i> 單一訂單細節</a>
+                </div>
+                <a href="#" class="px-4 sidebar-link "><i class="bi bi-link"></i> 相關連結</a>
+            </div>
+
+            <a href="#" class="mt-auto px-4 sidebar-link"><i class="bi bi-box-arrow-right"></i> 登出</a>
+        </aside>
+        <main class="main">
+            <div class="bg-white border-bottom w-100 sticky-top">
+                <a href="#" class="d-inline-block py-3 px-4 border-end" id="sidebar-btn"><i
+                        class="bi bi-arrows-angle-expand"></i></a>
+            </div>
+
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="./js/all.js"></script>
+</body>
+
+</html>
